@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,41 +17,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2m-x4-s98">
-                                <rect key="frame" x="119" y="413" width="130" height="30"/>
-                                <state key="normal" title="Left Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOD-TZ-Frt">
-                                <rect key="frame" x="375" y="413" width="103" height="30"/>
-                                <state key="normal" title="Right Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which Devices Displaying" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbF-BS-P4R">
                                 <rect key="frame" x="201" y="289" width="198" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOD-TZ-Frt">
+                                <rect key="frame" x="387" y="413" width="103" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="103" id="PtC-Vf-F6E"/>
+                                </constraints>
+                                <state key="normal" title="Right Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C2m-x4-s98">
+                                <rect key="frame" x="119" y="413" width="77" height="30"/>
+                                <state key="normal" title="Left Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="119" y="513" width="77" height="30"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="119" y="313" width="77" height="30"/>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="centerX" secondItem="qbF-BS-P4R" secondAttribute="centerX" id="YRM-0k-EeP"/>
-                            <constraint firstItem="C2m-x4-s98" firstAttribute="top" secondItem="qbF-BS-P4R" secondAttribute="bottom" constant="103" id="YZR-TE-NbU"/>
-                            <constraint firstItem="SOD-TZ-Frt" firstAttribute="leading" secondItem="C2m-x4-s98" secondAttribute="trailing" constant="126" id="jLS-o3-wSc"/>
-                            <constraint firstItem="SOD-TZ-Frt" firstAttribute="top" secondItem="qbF-BS-P4R" secondAttribute="bottom" constant="103" id="pze-wG-IIg"/>
+                            <constraint firstItem="C2m-x4-s98" firstAttribute="top" secondItem="SOD-TZ-Frt" secondAttribute="top" id="8Ol-hS-XX4" userLabel="Regular-Any Top Alignment - Left Button - Right Button"/>
+                            <constraint firstItem="C2m-x4-s98" firstAttribute="top" secondItem="qbF-BS-P4R" secondAttribute="bottom" constant="103" id="9Ks-Cj-x2u" userLabel="Compact-Any Vertical Space - (103) - Left Button - Which Devices Displaying"/>
+                            <constraint firstAttribute="centerX" secondItem="C2m-x4-s98" secondAttribute="centerX" id="EZ6-Iy-brG" userLabel="Compact-Any Center X Alignment - View - Left Button"/>
+                            <constraint firstItem="SOD-TZ-Frt" firstAttribute="top" secondItem="qbF-BS-P4R" secondAttribute="bottom" constant="150" id="PDo-c8-Wrc" userLabel="Compact-Any Vertical Space - (150) - Right Button - Which Devices Displaying"/>
+                            <constraint firstAttribute="centerX" secondItem="qbF-BS-P4R" secondAttribute="centerX" id="YRM-0k-EeP" userLabel="Any-Any Center X Alignment - View - Which Devices Displaying"/>
+                            <constraint firstItem="C2m-x4-s98" firstAttribute="top" secondItem="qbF-BS-P4R" secondAttribute="bottom" constant="103" id="YZR-TE-NbU" userLabel="Any-Any Vertical Space - (103) - Left Button - Which Devices Displaying"/>
+                            <constraint firstItem="SOD-TZ-Frt" firstAttribute="leading" secondItem="C2m-x4-s98" secondAttribute="trailing" constant="191" id="jLS-o3-wSc"/>
+                            <constraint firstItem="SOD-TZ-Frt" firstAttribute="top" secondItem="qbF-BS-P4R" secondAttribute="bottom" constant="103" id="pze-wG-IIg" userLabel="Any-Compact Vertical Space - (103) - Right Button - Which Devices Displaying"/>
+                            <constraint firstAttribute="centerX" secondItem="SOD-TZ-Frt" secondAttribute="centerX" id="syx-2Y-N5g" userLabel="Compact-Regular Center X Alignment - View - Right Button"/>
                             <constraint firstItem="qbF-BS-P4R" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="269" id="ujP-uI-1SH"/>
-                            <constraint firstItem="C2m-x4-s98" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="119" id="wJZ-Ws-Dmw"/>
-                            <constraint firstAttribute="centerY" secondItem="qbF-BS-P4R" secondAttribute="centerY" id="zQA-Y8-ZvV"/>
+                            <constraint firstItem="C2m-x4-s98" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="119" id="wJZ-Ws-Dmw" userLabel="Regular-Any Horizontal Space - (119) - Left Button - View"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="SOD-TZ-Frt" secondAttribute="trailing" constant="94" id="yVO-47-k2o" userLabel="Regular-Any Horizontal Space - (94) - View - Right Button"/>
+                            <constraint firstAttribute="centerY" secondItem="qbF-BS-P4R" secondAttribute="centerY" id="zQA-Y8-ZvV" userLabel="Any-Any Center Y Alignment - View - Which Devices Displaying"/>
+                            <constraint firstAttribute="centerX" secondItem="C2m-x4-s98" secondAttribute="centerX" id="zeR-vH-0nr" userLabel="Compact-Any Horizontal Center -  Left Button"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="ujP-uI-1SH"/>
+                                <exclude reference="8Ol-hS-XX4"/>
+                                <exclude reference="9Ks-Cj-x2u"/>
+                                <exclude reference="EZ6-Iy-brG"/>
+                                <exclude reference="wJZ-Ws-Dmw"/>
+                                <exclude reference="zeR-vH-0nr"/>
+                                <exclude reference="PDo-c8-Wrc"/>
+                                <exclude reference="jLS-o3-wSc"/>
+                                <exclude reference="pze-wG-IIg"/>
+                                <exclude reference="syx-2Y-N5g"/>
+                                <exclude reference="yVO-47-k2o"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="pze-wG-IIg"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="EZ6-Iy-brG"/>
+                                <include reference="zeR-vH-0nr"/>
+                                <include reference="PDo-c8-Wrc"/>
+                                <exclude reference="yVO-47-k2o"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="8Ol-hS-XX4"/>
+                                <include reference="wJZ-Ws-Dmw"/>
+                                <include reference="yVO-47-k2o"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9Ks-Cj-x2u"/>
+                                <exclude reference="YZR-TE-NbU"/>
+                                <include reference="syx-2Y-N5g"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="qbF-BS-P4R" id="pbi-8Q-KD6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
